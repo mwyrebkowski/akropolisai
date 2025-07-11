@@ -16,13 +16,18 @@ const AboutSection = () => {
         <p className={styles.description}>
           To dla nich 31 lipca zgromadzą się tam największe umysły sztucznej inteligencji w Polsce. Zaszczyci nas swoją obecnością
           <strong> Wojciech Zaremba</strong>, twórca ChatuGPT i współzałożyciel <strong>OpenAI</strong>. Na scenie będą również twórcy największych polskich
-          jednorożców technologicznych – <strong>Eleven Labs</strong> oraz <strong>IceEYE</strong> oraz najlepsi w kraju eksperci od sztucznej inteligencji.
+          jednorożców technologicznych – <strong>Eleven Labs</strong> oraz <strong>ICEYE</strong> oraz najlepsi w kraju eksperci od sztucznej inteligencji.
         </p>
 
         <p className={styles.invitation}>
           Wspólnie spróbujemy zrozumieć co to znaczy być człowiekiem w erze sztucznej inteligencji. Jak odnaleźć się w erze wykładniczego
           postępu, co to znaczy dla nauki i dla Polski. Jak młode talenty mogą wykorzystać tę szansę.
         </p>
+        
+        <p className={styles.invitation}>
+          Zapraszamy na wydarzenie tegorocznych maturzystów i uczniów szkół średnich, którzy są finalistami, bądź laureatami następujących olimpiad: <strong>matematycznej</strong>, <strong>informatycznej</strong>, <strong>fizycznej</strong>, <strong>biologicznej</strong>, <strong>chemicznej</strong>, <strong>lingwistyki matematycznej</strong>, <strong>sztucznej inteligencji</strong>, <strong>filozoficznej</strong>, <strong>wiedzy ekonomicznej</strong>, <strong>statystycznej</strong> oraz <strong>Turnieju Młodych Fizyków</strong>.
+        </p>
+        
         <button className={styles.button}>Formularz zgłoszeniowy</button>
       </div>
 

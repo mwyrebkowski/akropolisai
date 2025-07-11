@@ -10,9 +10,9 @@ describe('GuestsSection', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  test('renders four speaker cards', () => {
+  test('renders five speaker cards', () => {
     render(<GuestsSection />);
     const cards = screen.getAllByTestId('guest-card');
-    expect(cards.length).toBe(4);
+    expect(cards.length).toBe(5);
   });
 }); 

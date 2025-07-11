@@ -26,6 +26,12 @@ const guests = [
     img: '/andrzejdragan.jpeg',
     bio: 'Profesor fizyki teoretycznej, artysta i popularyzator nauki, wykładowca na Wydziale Fizyki UW.'
   },
+  {
+    name: 'Marcin Markiewicz',
+    title: 'Silent Eight',
+    img: '/marcinmarkiewicz.png',
+    bio: 'Twórca firmy Silent Eight, specjalizującej się w technologiach AI do walki z przestępstwami finansowymi, z wyceną przekraczającą miliard złotych.'
+  },
 ];
 
 const GuestsSection = () => {

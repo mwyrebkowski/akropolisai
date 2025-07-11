@@ -24,11 +24,26 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* exactly 4 columns */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   gap: 2rem; /* better spacing between cards */
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   flex: none; /* don't flex to prevent scrolling */
+}
+
+/* Special styling for 5 items: 3 in first row, 2 centered in second */
+.grid .card:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-self: end;
+  margin-right: 1rem;
+}
+
+.grid .card:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: start;
+  margin-left: 1rem;
 }
 
 .card {
