@@ -10,6 +10,19 @@
   justify-content: center;
 }
 
+/* Logo Container */
+.logoContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 175px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(4rem + 25px);
+  z-index: 3;
+}
+
 /* Background Image */
 .bg {
   position: absolute;
@@ -24,36 +37,26 @@
 
 /* UJ University Crest - Centered Left */
 .crest {
-  position: absolute;
-  top: 50%;
-  left: 2rem;
-  transform: translateY(-50%);
-  width: 120px;
+  width: 360px;
   height: auto;
-  z-index: 3;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
 
 .crest:hover {
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
 }
 
 /* "This is IT" Speech Bubble - Centered Right */
 .speech {
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
-  width: 120px;
+  width: 360px;
   height: auto;
-  z-index: 3;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
 
 .speech:hover {
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Bottom Bar */
@@ -72,12 +75,12 @@
 
 .bottomBar .left,
 .bottomBar .right {
-  font-style: italic;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .bottomBar .left {
@@ -94,15 +97,17 @@
     height: 100vh;
     min-height: 100vh;
   }
+
+  .logoContainer {
+    gap: calc(2rem + 25px);
+  }
   
   .crest {
-    left: 1rem;
-    width: 80px;
+    width: 240px;
   }
   
   .speech {
-    right: 1rem;
-    width: 80px;
+    width: 240px;
   }
   
   .bottomBar {
@@ -124,15 +129,18 @@
     height: 100vh;
     min-height: 100vh;
   }
+
+  .logoContainer {
+    flex-direction: column;
+    gap: calc(2rem + 25px);
+  }
   
   .crest {
-    width: 60px;
-    left: 0.5rem;
+    width: 180px;
   }
   
   .speech {
-    width: 60px;
-    right: 0.5rem;
+    width: 180px;
   }
   
   .bottomBar {
