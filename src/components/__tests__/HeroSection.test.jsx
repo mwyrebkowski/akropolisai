@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import HeroSection from '../HeroSection';
+import AboutSection from '../AboutSection';
 
 describe('HeroSection', () => {
   test('renders without crashing', () => {
@@ -33,7 +34,7 @@ describe('HeroSection', () => {
 
   test('displays bottom bar with italic text content', () => {
     render(<HeroSection />);
-    const leftText = screen.getByText('Being human in the age of AI');
+    const leftText = screen.getByText('Being Human in the Age of AI');
     const rightText = screen.getByText('Kraków 31.07.2025');
     
     expect(leftText).toBeInTheDocument();
@@ -57,7 +58,7 @@ describe('HeroSection', () => {
   test('bottom bar has correct structure and classes', () => {
     render(<HeroSection />);
     const bottomBar = screen.getByTestId('bottom-bar');
-    const leftText = screen.getByText('Being human in the age of AI');
+    const leftText = screen.getByText('Being Human in the Age of AI');
     const rightText = screen.getByText('Kraków 31.07.2025');
     
     expect(bottomBar.className).toContain('bottomBar');
@@ -69,13 +70,41 @@ describe('HeroSection', () => {
     render(<HeroSection />);
     const ujLogo = screen.getByAltText('UJ University crest');
     const speechLogo = screen.getByAltText('This is IT speech bubble');
-    
-    // Check DOM order by comparing their positions
-    const heroSection = screen.getByTestId('hero');
-    const children = Array.from(heroSection.children);
-    const ujIndex = children.indexOf(ujLogo);
-    const speechIndex = children.indexOf(speechLogo);
-    
-    expect(ujIndex).toBeLessThan(speechIndex);
+
+    // compareDocumentPosition returns a bitmask. DOCUMENT_POSITION_FOLLOWING (4) indicates that
+    // ujLogo comes before speechLogo in the DOM tree.
+    const isUjBeforeSpeech = ujLogo.compareDocumentPosition(speechLogo) & Node.DOCUMENT_POSITION_FOLLOWING;
+    expect(isUjBeforeSpeech).toBeTruthy();
+  });
+
+  test('crest and speech logos have correct links', () => {
+    render(<HeroSection />);
+    const crestLink = screen.getByAltText('UJ University crest').closest('a');
+    const speechLink = screen.getByAltText('This is IT speech bubble').closest('a');
+    expect(crestLink).toHaveAttribute('href', 'https://www.uj.edu.pl/');
+    expect(speechLink).toHaveAttribute('href', 'https://www.youtube.com/@MK_ThisIsIT');
+  });
+});
+
+describe('AboutSection', () => {
+  test('renders interview image (wywiad.png) in the right section', () => {
+    render(<AboutSection />);
+    const interviewImg = screen.getByAltText('Wywiad Macieja Kaweckiego z Wojciechem Zarembą');
+    expect(interviewImg).toBeInTheDocument();
+    expect(interviewImg).toHaveAttribute('src', '/wywiad.png');
+  });
+
+  test('interview image appears after the call-to-action button (bottom of section)', () => {
+    render(<AboutSection />);
+    const button = screen.getByRole('button', { name: /Formularz zgłoszeniowy/i });
+    const interviewImg = screen.getByAltText('Wywiad Macieja Kaweckiego z Wojciechem Zarembą');
+
+    const aboutSection = button.closest('section');
+    const children = Array.from(aboutSection.children);
+    const buttonIndex = children.indexOf(button.parentElement); // button is inside left div
+    const imgWrapper = interviewImg.closest('a');
+    const imgParentIndex = children.indexOf(imgWrapper.parentElement);
+
+    expect(imgParentIndex).toBeGreaterThan(buttonIndex);
   });
 }); 

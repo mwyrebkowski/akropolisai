@@ -23,6 +23,10 @@
   z-index: 3;
 }
 
+.logoContainer a {
+  display: flex;
+}
+
 /* Background Image */
 .bg {
   position: absolute;
@@ -75,7 +79,7 @@
 
 .bottomBar .left,
 .bottomBar .right {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);

@@ -1,0 +1,95 @@
+/* About Section Container */
+.about {
+  height: 100vh; /* fit in single viewport */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 1.5rem;
+  padding-bottom: 5rem; /* ensure internal content stays above bottom */
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.left, .right {
+  width: 100%;
+  max-width: 900px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left {
+  align-items: center;
+}
+
+.right {
+  margin-top: 2rem;
+  margin-bottom: 2rem; /* spacing below photo */
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 2.8rem; /* 20% smaller */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.description, .invitation {
+  font-size: 0.9375rem; /* reduced by ~1pt */
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+.button {
+  background-color: transparent;
+  color: #0d3856;
+  border: 2px solid #0d3856;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0d3856;
+  color: #ffffff;
+}
+
+.photoLink {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photoLink:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.photo {
+  width: 100%;
+  display: block;
+  max-height: 42vh; /* further reduced to fit caption */
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #6c757d;
+  margin-bottom: 5rem; /* increased spacing before next section */
+}

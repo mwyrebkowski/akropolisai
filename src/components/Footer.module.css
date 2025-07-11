@@ -1,0 +1,25 @@
+ .footer {
+   width: 100%;
+   padding: 1rem 2rem;
+   background: #f0f4f8;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-family: 'Inter', sans-serif;
+   font-size: 0.9rem;
+ }
+ 
+ .copy {
+   color: #333;
+ }
+ 
+ .links a {
+   margin-left: 1rem;
+   font-size: 1.4rem;
+   color: #0d3856;
+   text-decoration: none;
+ }
+ 
+ .links a:hover {
+   color: #003a6d;
+ } 
