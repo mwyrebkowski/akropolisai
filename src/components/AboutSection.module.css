@@ -1,6 +1,6 @@
 /* About Section Container */
 .about {
-  height: 100vh; /* fit in single viewport */
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
