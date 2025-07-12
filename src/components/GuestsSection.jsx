@@ -53,7 +53,14 @@ const GuestsSection = () => {
         ))}
       </div>
       <div className={styles.buttonWrapper}>
-        <button className={styles.ctaButton}>Formularz zgłoszeniowy</button>
+        <a 
+          href="https://forms.gle/gZ3beXLiNQtVsnEB8" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={styles.ctaButton}
+        >
+          Formularz zgłoszeniowy
+        </a>
       </div>
     </section>
   );

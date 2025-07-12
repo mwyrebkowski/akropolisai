@@ -28,7 +28,14 @@ const AboutSection = () => {
           Zapraszamy na wydarzenie tegorocznych maturzystów i uczniów szkół średnich, którzy są finalistami, bądź laureatami następujących olimpiad: <strong>matematycznej</strong>, <strong>informatycznej</strong>, <strong>fizycznej</strong>, <strong>biologicznej</strong>, <strong>chemicznej</strong>, <strong>lingwistyki matematycznej</strong>, <strong>sztucznej inteligencji</strong>, <strong>filozoficznej</strong>, <strong>wiedzy ekonomicznej</strong>, <strong>statystycznej</strong> oraz <strong>Turnieju Młodych Fizyków</strong>.
         </p>
         
-        <button className={styles.button}>Formularz zgłoszeniowy</button>
+        <a 
+          href="https://forms.gle/gZ3beXLiNQtVsnEB8" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={styles.button}
+        >
+          Formularz zgłoszeniowy
+        </a>
       </div>
 
       {/* Interview photo */}
