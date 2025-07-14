@@ -1,7 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className={styles.hero} data-testid="hero">
       <img 
@@ -26,8 +31,8 @@ const HeroSection = () => {
         </a>
       </div>
       <div className={styles.bottomBar} data-testid="bottom-bar">
-        <span className={styles.left}>Being Human in the Age of AI</span>
-        <span className={styles.right}>Kraków 31.07.2025</span>
+        <span className={styles.left}>{t.hero.title}</span>
+        <span className={styles.right}>{t.hero.location}</span>
       </div>
     </section>
   );

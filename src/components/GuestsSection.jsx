@@ -1,52 +1,24 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 import styles from './GuestsSection.module.css';
 
-const guests = [
-  {
-    name: 'Wojciech Zaremba',
-    title: 'OpenAI',
-    img: '/wojciechzaremba.jpeg',
-    bio: 'Współzałożyciel OpenAI, twórca ChatGPT.'
-  },
-  {
-    name: 'Rafał Modrzewski',
-    title: 'ICEYE',
-    img: '/rafalmodrzewski.webp',
-    bio: 'Współzałożyciel ICEYE, firmy budującej największą na świecie komercyjną konstelację mikrosatelit.'
-  },
-  {
-    name: 'Piotr Dąbkowski',
-    title: 'ElevenLabs',
-    img: '/piotrdabkowski.webp',
-    bio: 'CTO ElevenLabs, twórca najlepszego modelu głosowego na świecie.'
-  },
-  {
-    name: 'Andrzej Dragan',
-    title: 'Uniwersytet Warszawski',
-    img: '/andrzejdragan.jpeg',
-    bio: 'Profesor fizyki teoretycznej, artysta i popularyzator nauki, wykładowca na Wydziale Fizyki UW.'
-  },
-  {
-    name: 'Marcin Markiewicz',
-    title: 'Silent Eight',
-    img: '/marcinmarkiewicz.png',
-    bio: 'Twórca firmy Silent Eight, specjalizującej się w technologiach AI do walki z przestępstwami finansowymi, z wyceną przekraczającą miliard złotych.'
-  },
-];
-
 const GuestsSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className={styles.guests} data-testid="guests">
-      <h2 className={styles.heading}>Keynote Speakers</h2>
+      <h2 className={styles.heading}>{t.guests.heading}</h2>
       <div className={styles.grid}>
-        {guests.map((g) => (
+        {t.guests.speakers.map((g) => (
           <div key={g.name} className={styles.card} data-testid="guest-card">
-            <img src={g.img} alt={g.name} className={styles.photo} />
+            <img src={`/${g.name.toLowerCase().replace(/\s+/g, '').replace(/ł/g, 'l').replace(/ą/g, 'a')}.${g.name === 'Marcin Markiewicz' ? 'png' : g.name === 'Andrzej Dragan' || g.name === 'Wojciech Zaremba' ? 'jpeg' : 'webp'}`} alt={g.name} className={styles.photo} />
             <div className={styles.meta}>
               <h3 className={styles.name}>{g.name}</h3>
               <p className={styles.title}>{g.title}</p>
               <p className={styles.bio}>
-                {g.bio || 'Bio description'}
+                {g.bio}
               </p>
             </div>
           </div>
@@ -59,7 +31,7 @@ const GuestsSection = () => {
           rel="noopener noreferrer" 
           className={styles.ctaButton}
         >
-          Formularz zgłoszeniowy
+          {t.guests.button}
         </a>
       </div>
     </section>

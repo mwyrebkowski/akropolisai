@@ -1,0 +1,55 @@
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(128, 128, 128, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.toggle:hover {
+  background: rgba(128, 128, 128, 0.15);
+  border-color: rgba(128, 128, 128, 0.4);
+}
+
+.toggle:active {
+  transform: scale(0.98);
+}
+
+.active {
+  color: #333;
+  font-weight: 600;
+}
+
+.inactive {
+  color: #888;
+  font-weight: 400;
+}
+
+.separator {
+  margin: 0 8px;
+  color: #bbb;
+  font-weight: 300;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .toggle {
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .separator {
+    margin: 0 6px;
+  }
+} 

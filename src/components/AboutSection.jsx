@@ -1,31 +1,31 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 import styles from './AboutSection.module.css';
 
 const AboutSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className={styles.about} data-testid="about">
       {/* Textual content */}
       <div className={styles.left}>
-        <h2 className={styles.title}>Being Human in the Age of AI</h2>
+        <h2 className={styles.title}>{t.about.title}</h2>
         <p className={styles.description}>
-          Kanał <strong>This is IT</strong> wraz z <strong>Uniwersytetem Jagiellońskim</strong> zapraszają na pierwsze w historii takie
-          wydarzenie technologiczne w gmachu najstarszej uczelni w Polsce. <strong>Dedykujemy je laureatom i finalistom olimpiad
-          przedmiotowych zainteresowanych sztuczną inteligencją.</strong>
+          {t.about.description1}
         </p>
 
         <p className={styles.description}>
-          To dla nich 31 lipca zgromadzą się tam największe umysły sztucznej inteligencji w Polsce. Zaszczyci nas swoją obecnością
-          <strong> Wojciech Zaremba</strong>, twórca ChatuGPT i współzałożyciel <strong>OpenAI</strong>. Na scenie będą również twórcy największych polskich
-          jednorożców technologicznych – <strong>Eleven Labs</strong> oraz <strong>ICEYE</strong> oraz najlepsi w kraju eksperci od sztucznej inteligencji.
+          {t.about.description2}
         </p>
 
         <p className={styles.invitation}>
-          Wspólnie spróbujemy zrozumieć co to znaczy być człowiekiem w erze sztucznej inteligencji. Jak odnaleźć się w erze wykładniczego
-          postępu, co to znaczy dla nauki i dla Polski. Jak młode talenty mogą wykorzystać tę szansę.
+          {t.about.invitation1}
         </p>
         
         <p className={styles.invitation}>
-          Zapraszamy na wydarzenie tegorocznych maturzystów i uczniów szkół średnich, którzy są finalistami, bądź laureatami następujących olimpiad: <strong>matematycznej</strong>, <strong>informatycznej</strong>, <strong>fizycznej</strong>, <strong>biologicznej</strong>, <strong>chemicznej</strong>, <strong>lingwistyki matematycznej</strong>, <strong>sztucznej inteligencji</strong>, <strong>filozoficznej</strong>, <strong>wiedzy ekonomicznej</strong>, <strong>statystycznej</strong> oraz <strong>Turnieju Młodych Fizyków</strong>.
+          {t.about.invitation2}
         </p>
         
         <a 
@@ -34,7 +34,7 @@ const AboutSection = () => {
           rel="noopener noreferrer" 
           className={styles.button}
         >
-          Formularz zgłoszeniowy
+          {t.about.button}
         </a>
       </div>
 
@@ -53,7 +53,7 @@ const AboutSection = () => {
           />
         </a>
         <p className={styles.caption}>
-          Wywiad Macieja Kaweckiego z Wojciechem Zarembą
+          {t.about.caption}
         </p>
       </div>
     </section>
