@@ -28,6 +28,10 @@ const AboutSection = () => {
           {t.about.invitation2}
         </p>
         
+        <p className={styles.eventDetails}>
+          {t.about.eventDetails}
+        </p>
+        
         <a 
           href="https://forms.gle/gZ3beXLiNQtVsnEB8" 
           target="_blank" 

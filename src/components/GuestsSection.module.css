@@ -29,21 +29,7 @@
   width: 100%;
   max-width: 1000px;
   flex: none; /* don't flex to prevent scrolling */
-}
-
-/* Special styling for 5 items: 3 in first row, 2 centered in second */
-.grid .card:nth-child(4) {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  justify-self: end;
-  margin-right: 1rem;
-}
-
-.grid .card:nth-child(5) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  justify-self: start;
-  margin-left: 1rem;
+  justify-items: center; /* center cards in grid cells */
 }
 
 .card {
@@ -54,16 +40,19 @@
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  height: auto; /* let cards size naturally */
+  height: 520px; /* increased height to accommodate all text */
+  width: 100%; /* ensure full width */
+  max-width: 300px; /* maximum width for consistency */
+  min-width: 0; /* prevent overflow */
 }
 
 .photo {
   width: 100%;
   height: 300px; /* fixed 300px height */
-  width: 100%; /* full width */
   object-fit: cover;
-  object-position: center; /* ensure good crop positioning */
+  object-position: center top; /* better crop positioning - focus on top center */
   flex-shrink: 0; /* prevent photo from shrinking */
+  display: block; /* ensure block display */
 }
 
 .meta {
@@ -74,32 +63,62 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  height: 220px; /* increased height for meta section */
+  width: 100%; /* ensure full width */
+  box-sizing: border-box; /* include padding in width */
 }
 
 .name {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: 1.375rem; /* decreased by ~2pt */
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 1rem 0; /* increased margin to prevent overlap */
+  height: auto; /* allow natural height */
+  min-height: 1.6rem; /* minimum height */
+  overflow: visible; /* show full text */
+  width: 100%;
+  line-height: 1.2;
+}
+
+.logo {
+  height: 40px; /* fixed height for logos */
+  max-width: 120px; /* maximum width for logos */
+  object-fit: contain; /* maintain aspect ratio */
+  margin: 0 0 1rem 0; /* increased margin for better spacing */
+  filter: grayscale(0.2); /* slight desaturation for consistency */
+}
+
+/* Special styling for OpenAI logo - 140% zoom */
+.logo[alt="OpenAI"] {
+  transform: scale(1.4);
+  height: 40px; /* maintain same container height */
+  max-width: 120px; /* maintain same container width */
 }
 
 .title {
   font-size: 1rem;
   color: #555;
   margin: 0 0 0.4rem 0;
+  height: 1.2rem; /* fixed height for title */
+  overflow: hidden; /* hide overflow */
+  width: 100%;
 }
 
 .bio {
   font-size: 0.9rem;
   color: #444 !important;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
+  margin-top: 0;
+  margin-bottom: 0;
   display: block !important; /* force block display */
   text-align: center;
   visibility: visible !important;
   opacity: 1 !important;
   width: 100%;
   line-height: 1.4;
-  min-height: 2em; /* ensure space even if empty */
+  height: auto; /* allow natural height */
+  min-height: 100px; /* minimum height to accommodate longest text */
+  overflow: visible; /* show full text */
+  flex: 1; /* take remaining space */
 }
 
 .buttonWrapper {
@@ -142,28 +161,46 @@
     max-width: 400px; /* limit width for better mobile layout */
   }
 
-  /* Reset special positioning for mobile */
-  .grid .card:nth-child(4),
-  .grid .card:nth-child(5) {
-    grid-column: auto;
-    justify-self: auto;
-    margin-left: 0;
-    margin-right: 0;
+  .card {
+    height: 450px; /* increased height for mobile */
+    width: 100%; /* ensure full width on mobile */
+    max-width: none; /* remove max-width on mobile */
   }
 
   .meta {
-    padding: 0.75rem 1rem 0.75rem; /* more margin on mobile */
+    padding: 0.75rem 1rem; /* more margin on mobile */
+    height: 150px; /* increased meta height for mobile */
+    width: 100%; /* ensure full width */
   }
 
   .name {
     font-size: 1.3rem;
+    height: auto;
+    min-height: 1.5rem;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .logo {
+    height: 32px; /* smaller logo on mobile */
+    max-width: 100px;
+    margin: 0 0 0.8rem 0;
+  }
+
+  /* OpenAI logo scaling on mobile */
+  .logo[alt="OpenAI"] {
+    transform: scale(1.4);
+    height: 32px;
+    max-width: 100px;
   }
 
   .title {
     font-size: 0.95rem;
+    height: 1.1rem;
   }
 
   .bio {
     font-size: 0.9rem;
+    height: auto;
+    min-height: 80px; /* minimum height for mobile */
   }
 } 
