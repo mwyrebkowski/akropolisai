@@ -51,7 +51,7 @@ export const translations = {
           name: 'Marcin Markiewicz',
           logo: '/silenteight.png',
           logoAlt: 'Silent Eight',
-          bio: 'Twórca firmy Silent Eight, specjalizującej się w technologiach AI do walki z przestępstwami finansowymi, z wyceną przekraczającą miliard złotych.'
+          bio: 'Twórca firmy Silent Eight, specjalizującej się w technologiach AI do walki z przestępstwami finansowymi.'
         }
       ]
     }
@@ -109,7 +109,7 @@ export const translations = {
           name: 'Marcin Markiewicz',
           logo: '/silenteight.png',
           logoAlt: 'Silent Eight',
-          bio: 'Creator of Silent Eight, a company specializing in AI technologies for fighting financial crimes, with a valuation exceeding one billion zloty.'
+          bio: 'Creator of Silent Eight, a company specializing in AI technologies for fighting financial crimes.'
         }
       ]
     }
