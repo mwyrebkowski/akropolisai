@@ -121,5 +121,26 @@
   max-height: 350px;
   width: auto;
   object-fit: contain;
-  transform: scale(1.5); /* 50% zoom */
+  transform: scale(1.1); /* 10% zoom */
+}
+
+@media (max-width: 1024px) { /* tablets / half screens */
+  .partnerLogos {
+    column-gap: 10vw; /* tighter gap */
+  }
+  .partnerLogo {
+    max-height: 220px; /* shrink logos */
+    transform: scale(1); /* neutral scale */
+  }
+}
+
+@media (max-width: 600px) { /* mobile */
+  .partnerLogos {
+    column-gap: 4vw;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .partnerLogo {
+    max-height: 250px;
+  }
 }
