@@ -59,6 +59,12 @@ const AboutSection = () => {
         <p className={styles.caption}>
           {t.about.caption}
         </p>
+
+        {/* Partner logos */}
+        <div className={styles.partnerLogos}>
+          <img src="/ujlogofinal.png" alt="UJ Logo" className={styles.partnerLogo} />
+          <img src="/thisisitlogofinal.png" alt="This is IT Logo" className={styles.partnerLogo} />
+        </div>
       </div>
     </section>
   );

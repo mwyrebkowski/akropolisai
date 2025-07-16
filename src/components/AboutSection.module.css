@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: flex-start;
   padding: 4rem 1.5rem;
-  padding-bottom: 5rem; /* ensure internal content stays above bottom */
+  padding-bottom: 1rem; /* further reduced */
   background-color: #f8f9fa;
   text-align: center;
 }
@@ -106,4 +106,20 @@
   font-style: italic;
   color: #6c757d;
   margin-bottom: 5rem; /* increased spacing before next section */
+}
+
+/* Partner logos */
+.partnerLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20vw; /* 20% of viewport width between logos */
+  margin-top: 0.3rem; /* further reduced */
+}
+
+.partnerLogo {
+  max-height: 350px;
+  width: auto;
+  object-fit: contain;
+  transform: scale(1.5); /* 50% zoom */
 }
