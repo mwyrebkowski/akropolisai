@@ -51,7 +51,7 @@ export const translations = {
           name: 'Marcin Markiewicz',
           logo: '/silenteight.png',
           logoAlt: 'Silent Eight',
-          bio: 'Twórca firmy Silent Eight, specjalizującej się w technologiach AI do walki z przestępstwami finansowymi.'
+          bio: 'Twórca firmy Silent Eight, specjalizującej się w technologiach AI do walki z przestępstwami finansowymi, wycenianej na ponad miliard PLN.'
         }
       ]
     }
@@ -68,7 +68,7 @@ export const translations = {
     about: {
       title: "Being Human in the Age of AI",
       description1: "The This is IT channel together with the Jagiellonian University invite you to the first technological event of this kind in the history of Poland's oldest university. We dedicate it to laureates and finalists of subject olympiads interested in artificial intelligence.",
-      description2: "For them, the greatest minds of artificial intelligence in Poland will gather there on July 31st. We will be honored by the presence of Wojciech Zaremba, creator of ChatGPT and co-founder of OpenAI. On stage will also be the creators of Poland's largest technological unicorns – Eleven Labs and ICEYE, as well as the country's best experts in artificial intelligence.",
+      description2: "For them, the greatest minds of artificial intelligence in Poland will gather there on July 31st. We will be honored by the presence of Wojciech Zaremba, co-creator of ChatGPT and co-founder of OpenAI. On stage will also be the creators of Poland's largest technological unicorns – Eleven Labs and ICEYE, as well as the country's best experts in artificial intelligence.",
       invitation1: "Together we will try to understand what it means to be human in the era of artificial intelligence. How to find your place in the era of exponential progress, what it means for science and for Poland. How young talents can seize this opportunity.",
       invitation2: "We invite this year's high school graduates and secondary school students who are finalists or laureates of the following olympiads: mathematics, computer science, physics, biology, chemistry, mathematical linguistics, artificial intelligence, philosophy, economic knowledge, statistics, and the Young Physicists Tournament.",
       eventDetails: "We invite you to the event on July 31st, 2025, from 13:00-17:00 at the Auditorium Maximum of the Jagiellonian University at 33 Krupnicza Street in Krakow.",
@@ -109,7 +109,7 @@ export const translations = {
           name: 'Marcin Markiewicz',
           logo: '/silenteight.png',
           logoAlt: 'Silent Eight',
-          bio: 'Creator of Silent Eight, a company specializing in AI technologies for fighting financial crimes.'
+          bio: 'Creator of Silent Eight, a company specializing in AI technologies for fighting financial crimes, valued at over one billion PLN.'
         }
       ]
     }
