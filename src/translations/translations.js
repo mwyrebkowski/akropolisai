@@ -17,6 +17,11 @@ export const translations = {
       button: "Formularz zgłoszeniowy",
       caption: "Wywiad Macieja Kaweckiego z Wojciechem Zarembą"
     },
+
+    // Screening Section
+    screening: {
+      heading: "Projekcja filmu dokumentalnego \"Mistrz\""
+    },
     
     // Guests Section
     guests: {
@@ -74,6 +79,11 @@ export const translations = {
       eventDetails: "We invite you to the event on July 31st, 2025, from 13:00-17:00 at the Auditorium Maximum of the Jagiellonian University at 33 Krupnicza Street in Krakow.",
       button: "Registration Form",
       caption: "Interview by Maciej Kawecki with Wojciech Zaremba"
+    },
+
+    // Screening Section
+    screening: {
+      heading: "Screening of documentary \"Master\""
     },
     
     // Guests Section

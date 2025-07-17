@@ -4,6 +4,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import GuestsSection from './components/GuestsSection';
+import ScreeningSection from './components/ScreeningSection';
 import Footer from './components/Footer';
 import LanguageToggle from './components/LanguageToggle';
 import './App.css';
@@ -14,6 +15,7 @@ const MainContent = () => (
     <HeroSection />
     <AboutSection />
     <GuestsSection />
+    <ScreeningSection />
     <Footer />
   </>
 );
