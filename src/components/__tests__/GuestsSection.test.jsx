@@ -13,6 +13,6 @@ describe('GuestsSection', () => {
   test('renders five speaker cards', () => {
     render(<GuestsSection />);
     const cards = screen.getAllByTestId('guest-card');
-    expect(cards.length).toBe(5);
+    expect(cards.length).toBe(6);
   });
 }); 

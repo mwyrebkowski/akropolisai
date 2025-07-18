@@ -13,7 +13,7 @@ const GuestsSection = () => {
       <div className={styles.grid}>
         {t.guests.speakers.map((g) => (
           <div key={g.name} className={styles.card} data-testid="guest-card">
-            <img src={`/${g.name.toLowerCase().replace(/\s+/g, '').replace(/ł/g, 'l').replace(/ą/g, 'a')}.${g.name === 'Marcin Markiewicz' ? 'png' : g.name === 'Andrzej Dragan' || g.name === 'Wojciech Zaremba' ? 'jpeg' : 'webp'}`} alt={g.name} className={styles.photo} />
+            <img src={g.photo ? g.photo : `/${g.name.toLowerCase().replace(/\s+/g, '').replace(/ł/g, 'l').replace(/ą/g, 'a')}.${g.name === 'Marcin Markiewicz' ? 'png' : g.name === 'Andrzej Dragan' || g.name === 'Wojciech Zaremba' ? 'jpeg' : 'webp'}`} alt={g.name} className={styles.photo} />
             <div className={styles.meta}>
               <h3 className={styles.name}>{g.name}</h3>
               <img src={g.logo} alt={g.logoAlt} className={styles.logo} />

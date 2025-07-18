@@ -64,9 +64,20 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 220px; /* increased height for meta section */
-  width: 100%; /* ensure full width */
-  box-sizing: border-box; /* include padding in width */
+
+  /* flexible height */
+  height: auto;
+  min-height: 220px;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 1rem; /* default bottom space */
+}
+
+@media (min-width: 1024px) {
+  .meta {
+    padding-bottom: 2rem; /* larger space on Full HD/desktop */
+  }
 }
 
 .name {
@@ -93,6 +104,11 @@
   transform: scale(1.4);
   height: 40px; /* maintain same container height */
   max-width: 120px; /* maintain same container width */
+}
+
+.logo[alt="Uniwersytet Jagielloński"],
+.logo[alt="Jagiellonian University"] {
+  transform: scale(2.25);
 }
 
 .title {

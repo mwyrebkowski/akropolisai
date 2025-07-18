@@ -53,6 +53,13 @@ export const translations = {
           bio: 'Profesor fizyki teoretycznej, artysta i popularyzator nauki, wykładowca na Wydziale Fizyki UW.'
         },
         {
+          name: 'Sebastian Szybka',
+          logo: '/logoujcard.png',
+          logoAlt: 'Uniwersytet Jagielloński',
+          bio: 'Profesor Uniwersytetu Jagiellońskiego, doktor habilitowany, pracuje w Zakładzie Astrofizyki Relatywistycznej i Kosmologii UJ. Specjalizuje się w teorii grawitacji Einsteina.',
+          photo: '/sebastianszybka.png'
+        },
+        {
           name: 'Marcin Markiewicz',
           logo: '/silenteight.png',
           logoAlt: 'Silent Eight',
@@ -114,6 +121,13 @@ export const translations = {
           logo: '/uwlogo.png',
           logoAlt: 'University of Warsaw',
           bio: 'Professor of theoretical physics, artist and science popularizer, lecturer at the Faculty of Physics UW.'
+        },
+        {
+          name: 'Sebastian Szybka',
+          logo: '/logoujcard.png',
+          logoAlt: 'Jagiellonian University',
+          bio: 'Professor at the Jagiellonian University working in the Department of Relativistic Astrophysics and Cosmology. Specializes in Einstein\'s theory of gravity.',
+          photo: '/sebastianszybka.png'
         },
         {
           name: 'Marcin Markiewicz',
