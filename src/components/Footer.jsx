@@ -5,7 +5,8 @@ import { FaFacebookF, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/f
 const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.copy}>
-      © This is IT sp. z o.o.
+      © This is IT sp. z o.o. •{' '}
+      <a href="/regulamin.pdf" target="_blank" rel="noopener noreferrer" className={styles.regulamin}>Regulamin</a>
     </div>
     <div className={styles.rightSection}>
       <div className={styles.socialSection}>
